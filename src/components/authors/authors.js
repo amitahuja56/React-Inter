@@ -3,6 +3,8 @@
 var React=require('react');
 var AuthorApi=require('../../api/authorApi');
 var AuthorsList=require('./authorsList');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Authors=React.createClass({
 	 
@@ -27,6 +29,7 @@ var Authors=React.createClass({
 		return (
 			<div>
 				<h1> Authors </h1>
+				<Link to="add-author" className="btn btn-success"> Add Auhtor</Link>
 				<AuthorsList authors={this.state.authors} />
 			</div>
 			);
